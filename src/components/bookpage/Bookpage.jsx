@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './bookpage.css';
 import { useParams } from 'react-router-dom';
 import { DataContext } from '../UserContext';
@@ -7,14 +7,14 @@ import { DataContext } from '../UserContext';
 const Bookpage = () => {
 
   const [data, setData] = useState([]);
-
-  const { id } = useParams();
   const getData = useContext(DataContext);
+  const { id } = useParams();
   console.log(getData.data);
+
+  // *********************************************************************
 
 
   useEffect(() => {
-
 
     const getBookData = () => {
       const book = getData.data.filter((item) => item.number === Number(id));
@@ -26,6 +26,7 @@ const Bookpage = () => {
 
   }, [])
 
+  // *********************************************************************
 
 
   return (
@@ -44,14 +45,14 @@ const Bookpage = () => {
                       <span>Release Data: {item.releaseDate}</span>
                     </div>
                     <div className="description">
-                      <p>{item.description} 
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi. 
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi. 
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi. 
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi. 
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi. 
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi.</p>
+                      <p>{item.description}
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nam velit repellendus, neque fugiat dolore ut et voluptates autem delectus omnis ipsa totam ipsam blanditiis vero at architecto adipisci libero illum nemo. Soluta corporis accusantium qui suscipit excepturi dolores non magni, provident delectus quaerat porro quis rem ab veritatis. Perferendis amet quia porro modi totam inventore nobis iusto non nisi.</p>
                     </div>
 
                   </div>

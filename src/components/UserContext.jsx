@@ -29,8 +29,6 @@ const UserContext = ({ children }) => {
   }, [])
 
 
-
-
   return (
     <DataContext.Provider value={{ data, setData }}>
       {children}

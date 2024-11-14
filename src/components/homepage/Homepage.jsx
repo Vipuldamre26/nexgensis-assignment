@@ -1,5 +1,5 @@
-import { useState, useContext } from 'react';
 import './homepage.css';
+import { useState, useContext } from 'react';
 import { MdDelete } from "react-icons/md";
 import { DataContext } from '../UserContext';
 import { useNavigate } from 'react-router-dom';
@@ -14,27 +14,39 @@ const Homepage = () => {
 
     const [open, setOpen] = useState(false);
     const [selectedBook, setSelectedBook] = useState(null);
-
-
     const { data, setData } = useContext(DataContext);
     const navigate = useNavigate();
     // console.log(data);
 
+    // *********************************************************************
+
+
+    // deleting the book
     const deleteBook = (number) => {
         setSelectedBook(number);
         handleClickOpen();
     }
 
+    // *********************************************************************
 
+    // open a dialog for deleting book
     const handleClickOpen = () => {
         setOpen(true);
     };
 
+    // *********************************************************************
+
+
+    // close a dialog 
     const handleClose = () => {
         setSelectedBook(null);
         setOpen(false);
     };
 
+    // *********************************************************************
+
+
+    // deleting a book 
     const handleDelete = (number) => {
         const newBooksData = data.filter((item) => item.number !== selectedBook);
         // console.log(newBooksData);
@@ -43,6 +55,7 @@ const Homepage = () => {
     }
 
 
+    // *********************************************************************
 
 
     return (

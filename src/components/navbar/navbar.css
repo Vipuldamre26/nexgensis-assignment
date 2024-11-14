@@ -26,14 +26,13 @@
     width: 50%;
 }
 
-.navbar .inputField input{
+.navbar .inputField input {
     width: 100%;
     height: 2.4rem;
     font-size: 1rem;
     border: none;
     padding: 0 6px;
 }
-
 
 .navbar .inputField button {
     display: flex;
@@ -51,16 +50,7 @@
     outline: none;
 }
 
-
-
-
-
-
-
-
 @media (max-width: 878px) {
-
-
     .navbar .inputField button {
         font-size: 1rem;
         color: rgb(255, 255, 255);
@@ -68,21 +58,17 @@
         height: 2.1rem;
         width: 6rem;
     }
-
 }
 
 @media (max-width: 670px) {
-
-    .navbar{
+    .navbar {
         justify-content: space-between;
         padding: 0 0.8rem;
     }
-
 }
 
 @media (max-width: 400px) {
-
-    .navbar{
+    .navbar {
         justify-content: space-around;
         padding: 0 0.2rem;
     }
@@ -90,6 +76,4 @@
     .navbar .logo {
         font-size: 1rem;
     }
-
 }
-

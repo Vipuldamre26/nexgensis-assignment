@@ -1,15 +1,7 @@
-import { NavLink } from 'react-router-dom';
+
 import './navbar.css';
-import { useState } from 'react';
 
 const Navbar = () => {
-
-    const [mobile, setMobile] = useState(false);
-
-    const mobileMode = () => {
-        setMobile(true);
-    }
-
 
     return (
         <div className="navbar">
