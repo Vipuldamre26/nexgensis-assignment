@@ -1,0 +1,95 @@
+.navbar {
+    width: 97%;
+    height: 5rem;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1.1rem auto 0 auto;
+    border-radius: 18px;
+    box-sizing: border-box;
+    /* border: 2px solid rgb(152, 152, 152); */
+    font-size: 1.2rem;
+    position: relative;
+    box-shadow: 1px 1px 5px 5px rgba(192, 192, 192, 0.438);
+}
+
+.navbar .logo {
+    font-size: 6vmin;
+    font-weight: 600;
+}
+
+.navbar .inputField {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.navbar .inputField input{
+    width: 100%;
+    height: 2.4rem;
+    font-size: 1rem;
+    border: none;
+    padding: 0 6px;
+}
+
+
+.navbar .inputField button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    margin: 0 0.5rem;
+    height: 2.4rem;
+    width: 7rem;
+    background-color: black;
+}
+
+.navbar .inputField input:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 878px) {
+
+
+    .navbar .inputField button {
+        font-size: 1rem;
+        color: rgb(255, 255, 255);
+        margin: 0 0.2rem;
+        height: 2.1rem;
+        width: 6rem;
+    }
+
+}
+
+@media (max-width: 670px) {
+
+    .navbar{
+        justify-content: space-between;
+        padding: 0 0.8rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .navbar{
+        justify-content: space-around;
+        padding: 0 0.2rem;
+    }
+
+    .navbar .logo {
+        font-size: 1rem;
+    }
+
+}
+
