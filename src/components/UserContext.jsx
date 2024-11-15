@@ -18,7 +18,7 @@ const UserContext = ({ children }) => {
     async function fetchData() {
       try {
         const response = await axios.request(options);
-        console.log(response.data);
+        // console.log(response.data);
         setData(response.data);
       } catch (error) {
         console.error(error);
