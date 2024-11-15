@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import './bookpage.css';
+import defaultImg from '../../assets/default-img.jpg';
 import { useParams } from 'react-router-dom';
 import { DataContext } from '../UserContext';
 
@@ -41,7 +42,7 @@ const Bookpage = () => {
                   <h2>{item.originalTitle}</h2>
                   <div className="bookdata">
                     <div className="img">
-                      <img src={item.cover} alt="book Img" />
+                      <img src={item.cover ? item.cover : defaultImg} alt="book Img" />
                       <span>Release Data: {item.releaseDate}</span>
                     </div>
                     <div className="description">

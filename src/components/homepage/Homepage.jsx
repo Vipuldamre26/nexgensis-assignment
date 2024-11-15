@@ -1,4 +1,5 @@
 import './homepage.css';
+import defaultImg from '../../assets/default-img.jpg';
 import { useState, useContext } from 'react';
 import { MdDelete } from "react-icons/md";
 import { DataContext } from '../UserContext';
@@ -66,9 +67,10 @@ const Homepage = () => {
                         data.map((item) => {
                             return (
                                 <div className="card" key={item.number}  >
-                                    <img src={item.cover} alt="book Img" />
+                                    <button className='edit' onClick={() => navigate(`/editbook/${item.number}`)}>Edit</button>
+                                    <img src={item.cover ? item.cover : defaultImg} alt="book Img" />
                                     <h4>Book Title: {item.title}</h4>
-                                    <p>Release Data: {item.releaseDate}</p>
+                                    <p>Release Date: {item.releaseDate}</p>
                                     <div className="btn">
                                         <button onClick={() => navigate(`/book/${item.number}`)}>Read...</button>
                                         <MdDelete onClick={() => deleteBook(item.number)} className='delete' />
